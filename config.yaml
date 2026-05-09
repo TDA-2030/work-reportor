@@ -1,0 +1,44 @@
+server:
+  host: "127.0.0.1"
+  port: 8765
+
+database:
+  path: "data/work-reportor.db"
+
+collectors:
+  window:
+    enabled: true
+    interval: 3  # seconds
+  file:
+    enabled: true
+  git:
+    enabled: true
+    interval: 300  # seconds
+
+watch_dirs: []
+
+ignore_rules:
+  dirs:
+    - node_modules
+    - .git
+    - __pycache__
+    - .venv
+    - venv
+    - dist
+    - build
+    - .next
+    - .nuxt
+  extensions:
+    - .pyc
+    - .pyo
+    - .log
+    - .tmp
+    - .swp
+    - .lock
+
+ai:
+  api_key: ""
+  base_url: ""
+  model: "gpt-4o-mini"
+  language: "zh"
+  style: "formal"
